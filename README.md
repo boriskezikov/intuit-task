@@ -10,18 +10,18 @@ The API provides the following endpoints:
 ### Setup and Usage
 - Clone the repository to your local machine.
 - Ensure you have Java 17 and Gradle installed.
-- Build the project using the following command:
+- Build the Docker image using the following command:
 ```shell
-mvn clean install
+docker build -t intuit-app .
 ```
 - Start the application using the following command:
 ``` shell
-mvn spring-boot:run
+docker run -p 8080:8080 intuit-app
 ```
 - Once the application is running, you can access the API endpoints:
 
 ``` shell
-- Swagger UI: http://localhost:8080/swagger-ui/index.html
+Swagger UI: http://localhost:8080/swagger-ui/index.html
 ```
 
 ### Additional (with more time)
