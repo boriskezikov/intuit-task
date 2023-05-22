@@ -1,8 +1,7 @@
 package com.intuit.task.logic;
 
 import com.intuit.task.dao.PlayerRepository;
-import com.intuit.task.dao.PlayersCache;
-import com.intuit.task.model.Player;
+import com.intuit.task.domain.Player;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

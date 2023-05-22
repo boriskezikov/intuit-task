@@ -1,7 +1,7 @@
 package com.intuit.task.api;
 
 import com.intuit.task.logic.PlayerService;
-import com.intuit.task.model.Player;
+import com.intuit.task.domain.Player;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;

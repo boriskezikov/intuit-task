@@ -1,6 +1,6 @@
 package com.intuit.task.dao;
 
-import com.intuit.task.model.Player;
+import com.intuit.task.domain.Player;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

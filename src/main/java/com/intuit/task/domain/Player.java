@@ -1,4 +1,4 @@
-package com.intuit.task.model;
+package com.intuit.task.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
