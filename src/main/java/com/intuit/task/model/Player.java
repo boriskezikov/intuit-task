@@ -1,66 +1,86 @@
 package com.intuit.task.model;
 
-import com.opencsv.bean.CsvBindByName;
-import com.opencsv.bean.CsvDate;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "Player")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Player {
 
-    @CsvBindByName(column = "playerID")
+    @Id
+    @Column(name = "player_id")
     private String playerID;
-    @CsvBindByName(column = "birthYear")
+
+    @Column(name = "birth_year")
     private Integer birthYear;
-    @CsvBindByName(column = "birthMonth")
+
+    @Column(name = "birth_month")
     private Integer birthMonth;
-    @CsvBindByName(column = "birthDay")
+
+    @Column(name = "birth_day")
     private Integer birthDay;
-    @CsvBindByName(column = "birthCountry")
+
+    @Column(name = "birth_country")
     private String birthCountry;
-    @CsvBindByName(column = "birthState")
+
+    @Column(name = "birth_state")
     private String birthState;
-    @CsvBindByName(column = "birthCity")
+
+    @Column(name = "birth_city")
     private String birthCity;
-    @CsvBindByName(column = "deathYear")
+
+    @Column(name = "death_year")
     private Integer deathYear;
-    @CsvBindByName(column = "deathMonth")
+
+    @Column(name = "death_month")
     private Integer deathMonth;
-    @CsvBindByName(column = "deathDay")
+
+    @Column(name = "death_day")
     private Integer deathDay;
-    @CsvBindByName(column = "deathCountry")
+
+    @Column(name = "death_country")
     private String deathCountry;
-    @CsvBindByName(column = "deathState")
+
+    @Column(name = "death_state")
     private String deathState;
-    @CsvBindByName(column = "deathCity")
+
+    @Column(name = "death_city")
     private String deathCity;
-    @CsvBindByName(column = "nameFirst")
+
+    @Column(name = "name_first")
     private String nameFirst;
-    @CsvBindByName(column = "nameLast")
+
+    @Column(name = "name_last")
     private String nameLast;
-    @CsvBindByName(column = "nameGiven")
+
+    @Column(name = "name_given")
     private String nameGiven;
-    @CsvBindByName(column = "weight")
+
     private Integer weight;
-    @CsvBindByName(column = "height")
     private Integer height;
-    @CsvBindByName(column = "bats")
     private String bats;
-    @CsvBindByName(column = "throws")
+
+    @Column(name = "throws")
     private String throws_;
-    @CsvDate(value = "yyyy-MM-dd")
-    @CsvBindByName(column = "debut")
+
     private LocalDate debut;
-    @CsvDate(value = "yyyy-MM-dd")
-    @CsvBindByName(column = "finalGame")
+
+    @Column(name = "final_game")
     private LocalDate finalGame;
-    @CsvBindByName(column = "retroID")
+
+    @Column(name = "retro_id")
     private String retroID;
-    @CsvBindByName(column = "bbrefID")
+
+    @Column(name = "bbref_id")
     private String bbrefID;
 }

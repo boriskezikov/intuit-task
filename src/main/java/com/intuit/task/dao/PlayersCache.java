@@ -23,7 +23,6 @@ public class PlayersCache {
 
     private final Map<String, Player> playerCache = new ConcurrentHashMap<>();
 
-    @PostConstruct
     private void loadPlayers() {
         try {
             Resource resource = new ClassPathResource("player.csv");
