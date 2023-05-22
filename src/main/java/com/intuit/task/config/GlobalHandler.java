@@ -16,14 +16,14 @@ public class GlobalHandler {
     @ResponseBody
     @ExceptionHandler(Exception.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    protected ErrorDto handleEntityExistsException(Exception ex) {
+    protected ErrorDto handleGeneralException(Exception ex) {
         return new ErrorDto(500, ex.getMessage());
     }
 
     @ResponseBody
-    @ExceptionHandler(EntityNotFoundException.class)
+    @ExceptionHandler({EntityNotFoundException.class, IllegalArgumentException.class})
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    protected ErrorDto handleEntityExistsException(EntityNotFoundException ex) {
+    protected ErrorDto handleBadRequestException(RuntimeException ex) {
         return new ErrorDto(400, ex.getMessage());
     }
 
